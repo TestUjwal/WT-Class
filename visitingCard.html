@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+</head>
+<style>
+    .container {
+        height: 200px;
+        width: 500px;
+        border: 2px solid black;
+    }
+    .middle-line {
+        height: 10px;
+        width: 350px;
+        top: 0;
+        background: green;
+        margin-left: auto;
+        margin-right: auto;
+        right: 20px;
+    }
+    .div1 {
+        display: flex;
+        gap: 5px;
+    }
+    .div1 h3 {
+        justify-content: center;
+        align-items: center;
+    }
+    .div2 .line {
+        height: 20px;
+        width: 100%;
+        background: green;
+    }
+    .div2 .white{
+        position: relative;
+        left: 20px;
+        height: 20px;
+        width: 20px;
+        background: white;
+    }
+    .div2 img {
+        height: 100px;
+        width: 100px;
+        float: right;
+        position: relative;
+        right: 13px;
+        top: -52px;
+    }
+    .detailsWrapper{
+        padding: 5px 7px ;
+    }
+    .last-line {
+        position: relative;
+        height: 10px;
+        width: 100%;
+        background: green;
+        bottom: -9px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="middle-line">
+        </div>
+        <div class="div1">
+            <img src="data:mage/png;base64,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"
+                height="80px" alt="">
+            <h3>@Adarsha <br> bakery and cafe</h3>
+        </div>
+        <div class="div2">
+            <div class="line">
+                <div class="white"></div>
+                <img src="qrcode.png"
+                    alt="">
+            </div>
+        </div>
+        <div class="detailsWrapper">
+            <div>
+                <ion-icon name="call-outline"></ion-icon>
+                <span>9860000000</span>
+            </div>
+            <div>
+                <ion-icon name="location-outline"></ion-icon>
+                <span>Dhumbarahi, Kathmandu</span>
+            </div>
+            <div>
+                <ion-icon name="logo-instagram"></ion-icon>
+                <span>Adarsha bakery and cafe</span>
+            </div>
+        </div>
+        <div class="last-line">
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
